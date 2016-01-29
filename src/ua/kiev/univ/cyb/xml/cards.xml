@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oldCards xmlns="http://ccc.com/Purchase" xmlns:myspace="http://aaa.com/Purchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ccc.com/Purchase cards.xsd">
+    <oldCard id="c001">
+        <theme>sport</theme>
+        <type>common</type>
+        <sent>true</sent>
+        <country>USA</country>
+        <year>1913</year>
+        <valuable>collection</valuable>
+        <authors>
+            <myspace:painter>Jones</myspace:painter>
+            <myspace:poet>Lorens</myspace:poet>
+        </authors>
+    </oldCard>
+    
+    <oldCard id="c002">
+        <theme>nature</theme>
+        <type>common</type>
+        <sent>false</sent>
+        <country>Ukraine</country>
+        <year>2015</year>
+        <valuable>historical</valuable>
+        <authors>
+            <myspace:painter>Prymachenko</myspace:painter>
+            <myspace:poet>Vatra</myspace:poet>
+        </authors>
+    </oldCard>
+    
+</oldCards>

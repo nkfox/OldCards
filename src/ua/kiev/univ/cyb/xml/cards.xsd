@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified" 
+    targetNamespace="http://ccc.com/Purchase"
+    xmlns:myspace="http://aaa.com/Purchase"
+    xmlns="http://ccc.com/Purchase"> 
+    <xs:import schemaLocation="myspace.xsd" namespace="http://aaa.com/Purchase"/> 
+    <xs:element name="oldCards" type="typeCards"/>
+    <xs:complexType name="typeCards">
+        <xs:sequence>
+            <xs:element name="oldCard" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="theme" type="ThemeType"/>
+                        <xs:element name="type" type="TType"/>
+                        <xs:element name="sent" type="xs:boolean"/>
+                        <xs:element name="country" type="CountryType"/>
+                        <xs:element name="year" type="xs:integer"/>
+                        <xs:element name="valuable" type="ValType"/>
+                        <xs:element name="authors" type="myspace:authorType"/>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="ThemeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="city landscape"/>
+            <xs:enumeration value="nature"/>
+            <xs:enumeration value="people"/>
+            <xs:enumeration value="religion"/>
+            <xs:enumeration value="sport"/>
+            <xs:enumeration value="architectire"/>
+        </xs:restriction>
+    </xs:simpleType>
+        
+    <xs:simpleType name="TType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="congratulatory"/>
+            <xs:enumeration value="advertising"/>
+            <xs:enumeration value="common"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="CountryType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ukraine"/>
+            <xs:enumeration value="USA"/>
+            <xs:enumeration value="Spain"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ValType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="collection"/>
+            <xs:enumeration value="historical"/>
+            <xs:enumeration value="thematic"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
